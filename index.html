@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudyMate AI - PDF Study Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h2>🎓 StudyMate AI</h2>
+      <p class="subtitle">Your personal study assistant</p>
+  <label for="pdfFile" class="upload-button">
+    + Upload Study PDF
+  </label>
+  <input type="file" id="pdfFile" accept=".pdf">
+
+  <div class="document-box">
+    <h3>Your document</h3>
+    <p id="fileName">No PDF uploaded yet</p>
+  </div>
+
+  <div class="sidebar-note">
+    Learn smarter, one page at a time.
+  </div>
+</aside>
+
+<main class="main-content">
+  <header>
+    <div>
+      <h1>StudyMate AI</h1>
+      <p>Ask questions. Understand better. Learn faster.</p>
+    </div>
+    <span class="status">● Study mode</span>
+  </header>
+
+  <section class="welcome" id="welcome">
+    <div class="book-icon">📚</div>
+    <h2>What would you like to learn today?</h2>
+    <p>Upload your study PDF and prepare to explore your notes.</p>
+
+    <div class="suggestions">
+      <button class="suggestion" data-question="Summarize my study material">
+        📝 Summarize notes
+      </button>
+      <button class="suggestion" data-question="Explain the important concepts">
+        💡 Explain key concepts
+      </button>
+      <button class="suggestion" data-question="Create a quiz from my notes">
+        ✨ Generate a quiz
+      </button>
+    </div>
+  </section>
+
+  <section class="chat-messages" id="chatMessages" aria-live="polite"></section>
+
+  <form id="chatForm" class="chat-form">
+    <textarea id="question" rows="2"
+      placeholder="Ask a question about your study material..."
+      aria-label="Your question"></textarea>
+    <button type="submit" id="sendButton">Send ↑</button>
+  </form>
+
+  <p class="footer-note">
+    AI-generated answers can contain mistakes. Always verify important information.
+  </p>
+</main>
+  </div>
+
+  <script src="app.js"></script>
+
+</body>
+</html>

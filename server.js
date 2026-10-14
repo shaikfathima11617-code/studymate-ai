@@ -1,4 +1,3 @@
-
 const express = require("express");
 const path = require("path");
 const multer = require("multer");
@@ -122,7 +121,6 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
-
 app.use((err, req, res, next) => {
   console.error("Server error:", err.message);
 
@@ -136,6 +134,7 @@ app.use((err, req, res, next) => {
     error: err.message || "Something went wrong."
   });
 });
+
 app.listen(PORT, () => {
   console.log("StudyMate AI running on port " + PORT);
 });
